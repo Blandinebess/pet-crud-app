@@ -1,13 +1,17 @@
-import Header from "./components/Header.jsx";
-import Main from "./components/Main.jsx";
-import Footer from "./components/Footer.jsx";
+import PetList from "./components/PetList";
 
-export default function App() {
+function App() {
+  const pets = [
+    { name: "Buddy", type: "Dog" },
+    { name: "Mittens", type: "Cat" },
+    { name: "Goldie", type: "Fish" },
+  ];
+
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <div className="min-h-screen bg-gray-100 p-6">
+      <PetList pets={pets} />
+    </div>
   );
 }
+
+export default App;
